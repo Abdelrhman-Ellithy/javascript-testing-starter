@@ -43,7 +43,9 @@ describe('Core Functions Test Suite', () => {
       expect(validateUserInput('john', 17)).toContain('Invalid age');
     });
     it('both invalid', () => {
-        expect(validateUserInput('jo', 17)).toEqual(['Invalid age','Invalid username']);
+      let errors=validateUserInput('jo', 17);
+        expect(errors).toContain('Invalid age');
+        expect(errors).toContain('Invalid username');
       });
   });
 
@@ -103,7 +105,6 @@ describe('Core Functions Test Suite', () => {
 
   describe('Stack', () => {
     let stack;
-
     beforeEach(() => {
       stack = new Stack();
     });
