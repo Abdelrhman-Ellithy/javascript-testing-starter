@@ -6,10 +6,12 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "node --experimental-vm-modules node_modules/jasmine/bin/jasmine.js --config=jasmine.json"
   },
   "devDependencies": {
     "jasmine": "^5.6.0",
+    "jasmine-spec-reporter": "^7.0.0",
     "vite": "^5.0.0"
   },
   "dependencies": {
